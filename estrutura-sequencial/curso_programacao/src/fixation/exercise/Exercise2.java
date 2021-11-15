@@ -1,10 +1,15 @@
-/*Faça um programa para ler o valor do raio de um círculo, e depois mostrar o valor da área
+/* Faça um programa para ler o valor do raio de um círculo, e depois mostrar o valor da área
 deste círculo com quatro casas decimais conforme exemplos.
 
 Fórmula da área: area = π . raio 2
 
 Considere o valor de π = 3.14159
- */
+
+Autor (a): Alexandre Gonçalo
+
+Data atual: 11/11/2021
+
+*/
 
 package fixation.exercise;
 

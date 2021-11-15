@@ -1,5 +1,10 @@
-/*Faça um programa para ler dois valores inteiros, e depois mostrar na tela a soma desses números com uma
+/* Faça um programa para ler dois valores inteiros, e depois mostrar na tela a soma desses números com uma
 mensagem explicativa, conforme exemplos.
+
+Autor (a): Alexandre Gonçalo
+
+Data atual: 11/11/2021
+
 */
 
 package fixation.exercise;

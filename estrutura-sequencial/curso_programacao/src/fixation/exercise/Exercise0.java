@@ -27,7 +27,9 @@ Measue with eight decimal places: 53,23456700
 Rouded (three decimal places): 52,235
 US decimal point: 53.255
 
--- nome, autor, data
+Autor (a): Alexandre Gonçalo
+
+Data atual: 11/11/2021
 
 */
 
