@@ -31,7 +31,7 @@ public class Exercise3 {
             System.out.println("=================================");
             System.out.println("            RESULTADO            ");
             System.out.println("=================================");
-            System.out.printf("DIFERENCA = %d", (A * B - C * D));
+            System.out.printf("DIFERENCA = %d%n", (A * B - C * D));
 
         sc.close();
 
