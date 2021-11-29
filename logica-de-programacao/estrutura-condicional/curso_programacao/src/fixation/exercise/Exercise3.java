@@ -16,6 +16,7 @@ public class Exercise3 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        int gameTime = 0;
 
             System.out.println("======================");
             System.out.println("   DURAÇÃO DO JOGO    ");
@@ -24,9 +25,17 @@ public class Exercise3 {
                 final int beginH = sc.nextInt();
             System.out.print("Hora final: ");
                 final int endH = sc.nextInt();
+                if (beginH > endH) {
+                    gameTime = Math.abs(((beginH - endH) - 24));
+                } else if (endH > beginH) {
+                    gameTime = ((endH - beginH));
+                } else {
+                    gameTime = 24;
+                }
             System.out.println("======================");
             System.out.println("       RESULTADO      ");
             System.out.println("======================");
+            System.out.printf("O JOGO DUROU %d HORA(S)", gameTime);
 
         sc.close();
 
