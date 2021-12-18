@@ -24,16 +24,16 @@ public class Exercise4 {
             System.out.println("   SALÁRIO DO FUNCIONÁRIO (A)   ");
             System.out.println("================================");
             System.out.print("ID do funcionário (a): ");
-                final int idFun = sc.nextInt();
+                final int ID_FUN = sc.nextInt();
             System.out.print("Horas trabalhadas no mês: ");
-                final int workH = sc.nextInt();
+                final int WORK_H = sc.nextInt();
             System.out.print("Valor por hora: ");
-                final double valueH = sc.nextDouble();
+                final double VALUE_H = sc.nextDouble();
             System.out.println("================================");
             System.out.println("           RESULTADO            ");
             System.out.println("================================");
-            System.out.printf("NUMBER = %d%n", idFun);
-            System.out.printf("SALARY = U$ %.2f%n", (valueH * workH));
+            System.out.printf("NUMBER = %d%n", ID_FUN);
+            System.out.printf("SALARY = U$ %.2f%n", (VALUE_H * WORK_H));
 
         sc.close();
 

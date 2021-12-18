@@ -21,13 +21,13 @@ public class Exercise1 {
             System.out.println("        SOMA DE NÚMEROS         ");
             System.out.println("================================");
             System.out.print("Informe um valor inteiro: ");
-                final int numberOne = sc.nextInt();
+                final int NUMBER_ONE = sc.nextInt();
             System.out.print("Informe outro valor inteiro: ");
-                final int numberTwo = sc.nextInt();
+                final int NUMBER_TWO = sc.nextInt();
             System.out.println("================================");
             System.out.println("           RESULTADO            ");
             System.out.println("================================");
-            System.out.printf("SOMA = %d", (numberOne+numberTwo));
+            System.out.printf("SOMA = %d", (NUMBER_ONE+NUMBER_TWO));
 
             sc.close();
 

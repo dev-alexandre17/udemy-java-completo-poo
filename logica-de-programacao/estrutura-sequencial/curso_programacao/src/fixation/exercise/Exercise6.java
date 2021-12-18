@@ -28,19 +28,19 @@ public class Exercise6 {
             System.out.println("     ÁREAS GEOMÉTRICAS     ");
             System.out.println("===========================");
             System.out.print("Valor flutuante A: ");
-                final double floatingValueA = sc.nextDouble();
+                final double FLOATING_VALUE_A = sc.nextDouble();
             System.out.print("Valor flutuante B: ");
-                final double floatingValueB = sc.nextDouble();
+                final double FLOATING_VALUE_B = sc.nextDouble();
             System.out.print("Valor flutuante C: ");
-                final double floatingValueC = sc.nextDouble();
+                final double FLOATING_VALUE_C = sc.nextDouble();
             System.out.println("===========================");
             System.out.println("         RESULTADO         ");
             System.out.println("===========================");
-            System.out.printf("TRIANGULO: %.3f%n", ((floatingValueA * floatingValueC) / 2));
-            System.out.printf("CIRCULO: %.3f%n", (Math.PI * Math.pow(floatingValueC, 2)));
-            System.out.printf("TRAPEZIO: %.3f%n", (((floatingValueA + floatingValueB) * floatingValueC) / 2));
-            System.out.printf("QUARADO: %.3f%n", (floatingValueB * floatingValueB));
-            System.out.printf("RETANGULO: %.3f%n", (floatingValueA * floatingValueB));
+            System.out.printf("TRIANGULO: %.3f%n", ((FLOATING_VALUE_A * FLOATING_VALUE_C) / 2));
+            System.out.printf("CIRCULO: %.3f%n", (Math.PI * Math.pow(FLOATING_VALUE_C, 2)));
+            System.out.printf("TRAPEZIO: %.3f%n", (((FLOATING_VALUE_A + FLOATING_VALUE_B) * FLOATING_VALUE_C) / 2));
+            System.out.printf("QUARADO: %.3f%n", (FLOATING_VALUE_B * FLOATING_VALUE_A));
+            System.out.printf("RETANGULO: %.3f%n", (FLOATING_VALUE_A * FLOATING_VALUE_B));
 
         sc.close();
 

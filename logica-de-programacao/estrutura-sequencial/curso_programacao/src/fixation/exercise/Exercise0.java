@@ -41,23 +41,23 @@ public class Exercise0 {
 
     public static void main(String[] args) {
 
-        final String product1 = "Computer", product2 = "Office desk";
+        final String PRODUCT1 = "Computer", PRODUCT2 = "Office desk";
 
-        final int age = 30, code = 5290;
-        final char gender = 'F';
+        final int AGE = 30, CODE = 5290;
+        final char GENDER = 'F';
 
-        final double price1 = 2100.0, price2 = 650.50, measure = 53.234567;
+        final double PRICE1 = 2100.0, PRICE2 = 650.50, MEASURE = 53.234567;
 
         System.out.printf("Products: %n");
-        System.out.printf("%s, which price is $ %.2f%n", product1, price1);
-        System.out.printf("%s, which price is $ %.2f%n", product2, price2);
+        System.out.printf("%s, which price is $ %.2f%n", PRODUCT1, PRICE1);
+        System.out.printf("%s, which price is $ %.2f%n", PRODUCT2, PRICE2);
         System.out.println();
-        System.out.printf("Record: %d years old, code %d and gender: %c%n", age, code, gender);
+        System.out.printf("Record: %d years old, code %d and gender: %c%n", AGE, CODE, GENDER);
         System.out.println();
-        System.out.printf("Measue with eight decimal places: %.8f%n", measure);
-        System.out.printf("Rouded (three decimal places): %.3f%n", measure);
+        System.out.printf("Measue with eight decimal places: %.8f%n", MEASURE);
+        System.out.printf("Rouded (three decimal places): %.3f%n", MEASURE);
         Locale.setDefault(Locale.US);
-        System.out.printf("US decimal point: %.3f%n", measure);
+        System.out.printf("US decimal point: %.3f%n", MEASURE);
 
     }
 

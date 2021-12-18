@@ -29,11 +29,11 @@ public class Exercise2 {
             System.out.println("          ARÉA DE UM CÍRCULO        ");
             System.out.println("====================================");
             System.out.print("Insera o valor do raio: ");
-                double ray = sc.nextDouble();
+                double RAY = sc.nextDouble();
             System.out.println("====================================");
             System.out.println("             RESULTADO              ");
             System.out.println("====================================");
-            System.out.printf("A=%.4f%n", (PI * Math.pow(ray, 2)));
+            System.out.printf("A=%.4f%n", (PI * Math.pow(RAY, 2)));
 
             sc.close();
 

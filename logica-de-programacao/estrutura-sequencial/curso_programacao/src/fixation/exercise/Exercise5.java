@@ -23,22 +23,22 @@ public class Exercise5 {
             System.out.println("       VALOR TOTAL DE PEÇAS      ");
             System.out.println("=================================");
             System.out.print("Código da peça 1: ");
-                final int codPecOne = sc.nextInt();
+                final int COD_PEC_ONE = sc.nextInt();
             System.out.print("Número da peças 1: ");
-                final int numPecOne = sc.nextInt();
+                final int NUM_PEC_ONE = sc.nextInt();
             System.out.print("Valor unitário da peça 1: ");
-                final double valueUPecOne = sc.nextDouble();
+                final double VALUE_U_PEC_ONE = sc.nextDouble();
             System.out.println("=================================");
             System.out.print("Código da peça 2: ");
-                final int codPecTwo = sc.nextInt();
+                final int COD_PEC_Two = sc.nextInt();
             System.out.print("Número de peças 2: ");
-                final int numPecTwo = sc.nextInt();
+                final int NUM_PEC_TWO = sc.nextInt();
             System.out.print("Valor unitário da peça 2: ");
-                final double valueUPecTwo = sc.nextDouble();
+                final double VALUE_U_PEC_TWO = sc.nextDouble();
             System.out.println("=================================");
             System.out.println("            RESULTADO            ");
             System.out.println("=================================");
-            System.out.printf("VALOR A PAGAR: R$ %.2f%n", ((numPecOne * valueUPecOne) + (numPecTwo * valueUPecTwo)));
+            System.out.printf("VALOR A PAGAR: R$ %.2f%n", ((NUM_PEC_ONE * VALUE_U_PEC_ONE) + (NUM_PEC_TWO * VALUE_U_PEC_TWO)));
 
         sc.close();
 
