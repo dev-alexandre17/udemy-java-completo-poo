@@ -20,11 +20,11 @@ public class Exercise1 {
             System.out.println("         NÚMEROS PARES        ");
             System.out.println("==============================");
             System.out.print("Informe um valor inteiro: ");
-                final int number = sc.nextInt();
+                final int INTEGER_NUMBER = sc.nextInt();
             System.out.println("==============================");
             System.out.println("           RESULTADO          ");
             System.out.println("==============================");
-            System.out.println((number % 2 == 0) ? "PAR" : "IMPAR");
+            System.out.println((INTEGER_NUMBER % 2 == 0) ? "PAR" : "IMPAR");
 
         sc.close();
 

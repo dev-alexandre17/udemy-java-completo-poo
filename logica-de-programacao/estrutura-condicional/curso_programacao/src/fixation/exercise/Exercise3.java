@@ -22,13 +22,13 @@ public class Exercise3 {
             System.out.println("   DURAÇÃO DO JOGO    ");
             System.out.println("======================");
             System.out.print("Hora inicial: ");
-                final int beginH = sc.nextInt();
+                final int BEGIN_H = sc.nextInt();
             System.out.print("Hora final: ");
-                final int endH = sc.nextInt();
-                if (beginH > endH) {
-                    gameTime = Math.abs(((beginH - endH) - 24));
-                } else if (endH > beginH) {
-                    gameTime = ((endH - beginH));
+                final int END_H = sc.nextInt();
+                if (BEGIN_H > END_H) {
+                    gameTime = Math.abs(((BEGIN_H - END_H) - 24));
+                } else if (END_H > BEGIN_H) {
+                    gameTime = ((END_H - BEGIN_H));
                 } else {
                     gameTime = 24;
                 }

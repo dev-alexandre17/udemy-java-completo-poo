@@ -1,8 +1,13 @@
-/* Você deve fazer um programa que leia um valor qualquer e apresente uma mensagem dizendo em qual dos
-seguintes intervalos ([0,25], (25,50], (50,75], (75,100]) este valor se encontra. Obviamente se o valor não estiver em
-nenhum destes intervalos, deverá ser impressa a mensagem “Fora de intervalo”.
+/* Leia 2 valores com uma casa decimal (x e y), que devem representar as coordenadas
+de um ponto em um plano. A seguir, determine qual o quadrante ao qual pertence o
+ponto, ou se está sobre um dos eixos cartesianos ou na origem (x = y = 0).
 
-Data atual: 22/11/2021
+Se o ponto estiver na origem, escreva a mensagem “Origem”.
+
+Se o ponto estiver sobre um dos eixos escreva “Eixo X” ou “Eixo Y”, conforme for a
+situação.
+
+Data atual: 29/11/2021
 
 Autor (a): Alexandre Gonçalo
 
@@ -18,31 +23,34 @@ public class Exercise6 {
     public static void main(String[] args) {
 
         Locale.setDefault(Locale.US);
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner (System.in);
         String mensagem = "";
 
-            System.out.println("=====================================================");
-            System.out.println("                 INTERVALO DE NÚMEROS                ");
-            System.out.println("=====================================================");
-            System.out.print("Informe um número para saber seu intervalo: ");
-                final double number = sc.nextDouble();
-
-                if (number >= 0.00 && number <= 25.00) {
-                    mensagem = "Intervalo [0,25]\n";
-                } else if (number >= 0.00 && number <= 50.00) {
-                    mensagem = "Intervalo (25,50]\n";
-                } else if (number >= 0.0 && number <= 100.00) {
-                    mensagem = "Intervalo (75,100]\n";
+            System.out.println("==============================");
+            System.out.println("       PLANO CARTESIANO       ");
+            System.out.println("==============================");
+            System.out.print("Coordenada X: ");
+                final double X_AXIS = sc.nextDouble();
+            System.out.print("Coordenada Y: ");
+                final double Y_AXIS = sc.nextDouble();
+            System.out.println("==============================");
+                if (X_AXIS > 0.0 && Y_AXIS > 0.0) {
+                    mensagem = "Q1";
+                } else if (X_AXIS < 0.0 && Y_AXIS > 0.0) {
+                    mensagem = "Q2";
+                } else if (X_AXIS < 0.0 && Y_AXIS < 0.0) {
+                    mensagem = "Q3";
+                } else if (X_AXIS > 0.0 && Y_AXIS < 0.0) {
+                    mensagem = "Q4";
                 } else {
-                    mensagem = "Fora de intervalo\n";
+                    mensagem = "Origem";
                 }
 
-            System.out.println("=====================================================");
-            System.out.println("                     RESULTADO                       ");
-            System.out.println("=====================================================");
+            System.out.println("          RESULTADO           ");
+            System.out.println("==============================");
             System.out.printf("%s", mensagem);
 
         sc.close();
-    }
 
+    }
 }

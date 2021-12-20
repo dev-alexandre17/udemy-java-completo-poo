@@ -22,13 +22,14 @@ public class Exercise2 {
             System.out.println("       MÚLTIPLOS DE UM NÚMERO       ");
             System.out.println("====================================");
             System.out.print("Número inteiro: ");
-                final int numberA = sc.nextInt();
+                final int INTEGER_NUMBER_A = sc.nextInt();
             System.out.print("Outro número inteiro: ");
-                final int numberB = sc.nextInt();
+                final int INTEGER_NUMBER_B = sc.nextInt();
             System.out.println("====================================");
             System.out.println("             RESULTADO              ");
             System.out.println("====================================");
-            System.out.println(((numberA % numberB == 0) || (numberB % numberA == 0)) ? "Sao Multiplos" : "Nao sao Multiplos");
+            System.out.println(((INTEGER_NUMBER_A % INTEGER_NUMBER_B == 0) || (INTEGER_NUMBER_B % INTEGER_NUMBER_A == 0))
+            ? "Sao Multiplos" : "Nao sao Multiplos");
 
         sc.close();
 

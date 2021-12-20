@@ -1,5 +1,6 @@
-/* Com base na tabela abaixo, escreva um programa que leia o código de um item e a quantidade deste item. A
-seguir, calcule e mostre o valor da conta a pagar.
+/* Você deve fazer um programa que leia um valor qualquer e apresente uma mensagem dizendo em qual dos
+seguintes intervalos ([0,25], (25,50], (50,75], (75,100]) este valor se encontra. Obviamente se o valor não estiver em
+nenhum destes intervalos, deverá ser impressa a mensagem “Fora de intervalo”.
 
 Data atual: 22/11/2021
 
@@ -9,54 +10,39 @@ Autor (a): Alexandre Gonçalo
 
 package fixation.exercise;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Exercise5 {
 
     public static void main(String[] args) {
 
+        Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        double orderPrice = 0;
+        String mensagem = "";
 
-            System.out.println("==============================================");
-            System.out.println("CODIGO         ESPECIFICAÇÃO         PREÇO    ");
-            System.out.println("==============================================");
-            System.out.println("  1            Cachorro Quente       R$ 4.00  ");
-            System.out.println("  2            X-Salada              R$ 4.50  ");
-            System.out.println("  3            X-Bacon               R$ 5.00  ");
-            System.out.println("  4            Torrada simples       R$ 2.00  ");
-            System.out.println("  5            Refrigerante          R$ 1.50  ");
-            System.out.println("==============================================");
-            System.out.print("Código do item: ");
-                final int foodId = sc.nextInt();
-            System.out.print("Quantidade: ");
-                final int quantFood = sc.nextInt();
+            System.out.println("=====================================================");
+            System.out.println("                 INTERVALO DE NÚMEROS                ");
+            System.out.println("=====================================================");
+            System.out.print("Informe um número para saber seu intervalo: ");
+                final double REAL_NUMBER = sc.nextDouble();
 
-                switch (foodId) {
-                    case 1:
-                        orderPrice = (4.00 * quantFood);
-                        break;
-                    case 2:
-                        orderPrice = (4.50 * quantFood);
-                        break;
-                    case 3:
-                        orderPrice = (5.00 * quantFood);
-                        break;
-                    case 4:
-                        orderPrice = (2.00 * quantFood);
-                        break;
-                    case 5:
-                        orderPrice = (1.50 * quantFood);
-                        break;
+                if (REAL_NUMBER >= 0.00 && REAL_NUMBER <= 25.00) {
+                    mensagem = "Intervalo [0,25]\n";
+                } else if (REAL_NUMBER >= 0.00 && REAL_NUMBER <= 50.00) {
+                    mensagem = "Intervalo (25,50]\n";
+                } else if (REAL_NUMBER >= 0.0 && REAL_NUMBER <= 100.00) {
+                    mensagem = "Intervalo (75,100]\n";
+                } else {
+                    mensagem = "Fora de intervalo\n";
                 }
 
-            System.out.println("==============================================");
-            System.out.println("                 RESULTADO                    ");
-            System.out.println("==============================================");
-            System.out.printf("Total: R$ %.2f%n", orderPrice);
+            System.out.println("=====================================================");
+            System.out.println("                     RESULTADO                       ");
+            System.out.println("=====================================================");
+            System.out.printf("%s", mensagem);
 
         sc.close();
-
     }
 
 }

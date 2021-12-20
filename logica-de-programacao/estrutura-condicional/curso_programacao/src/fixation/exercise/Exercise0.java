@@ -20,11 +20,11 @@ public class Exercise0 {
             System.out.println("       NÚMEROS INTEIROS (N)       ");
             System.out.println("==================================");
             System.out.print("Digite um número inteiro: ");
-                final int number = sc.nextInt();
+                final int INTEGER_NUMBER = sc.nextInt();
             System.out.println("==================================");
             System.out.println("             RESULTADO            ");
             System.out.println("==================================");
-            System.out.println((number >= 0) ? "NAO NEGATIVO" : "NEGATIVO");
+            System.out.println((INTEGER_NUMBER >= 0) ? "NAO NEGATIVO" : "NEGATIVO");
 
         sc.close();
 
