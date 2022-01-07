@@ -29,7 +29,7 @@ public class Exercise2 {
             System.out.println("          ARÉA DE UM CÍRCULO        ");
             System.out.println("====================================");
             System.out.print("Insera o valor do raio: ");
-                double RAY = sc.nextDouble();
+                final double RAY = sc.nextDouble();
             System.out.println("====================================");
             System.out.println("             RESULTADO              ");
             System.out.println("====================================");

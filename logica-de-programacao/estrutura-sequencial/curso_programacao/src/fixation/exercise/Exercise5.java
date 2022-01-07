@@ -30,7 +30,7 @@ public class Exercise5 {
                 final double VALUE_U_PEC_ONE = sc.nextDouble();
             System.out.println("=================================");
             System.out.print("Código da peça 2: ");
-                final int COD_PEC_Two = sc.nextInt();
+                final int COD_PEC_TWO = sc.nextInt();
             System.out.print("Número de peças 2: ");
                 final int NUM_PEC_TWO = sc.nextInt();
             System.out.print("Valor unitário da peça 2: ");
