@@ -26,20 +26,20 @@ public class Exercise7 {
             System.out.println("         IMPOSTO DE RENDA         ");
             System.out.println("==================================");
             System.out.print("Salário: ");
-                double salary = sc.nextDouble();
+                final double SALARY = sc.nextDouble();
             System.out.println("==================================");
             System.out.println("            RESULTADO             ");
             System.out.println("==================================");
-                if (salary >= 0.0 && salary <= 2000.00) {
+                if (SALARY >= 0.0 && SALARY <= 2000.00) {
                     System.out.println("Isento");
-                } else if (salary >= 2000.01 && salary <= 3000.00) {
-                    tax = ((salary - 2000) * 0.08);
+                } else if (SALARY >= 2000.01 && SALARY <= 3000.00) {
+                    tax = ((SALARY - 2000) * 0.08);
                     System.out.printf("R$ %.2f%n", tax);
-                } else if (salary >= 3000.01 && salary <= 4500.00) {
-                    tax = ((80) + ((salary - 3000) * 0.18));
+                } else if (SALARY >= 3000.01 && SALARY <= 4500.00) {
+                    tax = ((80) + ((SALARY - 3000) * 0.18));
                     System.out.printf("R$ %.2f%n", tax);
-                } else if (salary > 4500.00) {
-                    tax = (350 + (salary - 4500) * 0.28);
+                } else if (SALARY > 4500.00) {
+                    tax = (350 + (SALARY - 4500) * 0.28);
                     System.out.printf("R$ %.2f%n", tax);
                 }
             System.out.println("==================================");
