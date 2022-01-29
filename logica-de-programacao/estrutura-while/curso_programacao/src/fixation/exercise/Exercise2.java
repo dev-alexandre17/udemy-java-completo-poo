@@ -56,6 +56,8 @@ public class Exercise2 {
             }
         }
 
+        sc.close();
+
         System.out.printf("Alcool: %d%n", alcohol);
         System.out.printf("Gasolina: %d%n", gasoline);
         System.out.printf("Diesel: %d%n", diesel);
