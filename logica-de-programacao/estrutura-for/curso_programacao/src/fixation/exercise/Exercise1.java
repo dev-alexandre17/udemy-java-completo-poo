@@ -20,16 +20,25 @@ public class Exercise1 {
 
         int in = 0, out = 0;
 
-            final int N = sc.nextInt();
+            System.out.println("===========================================");
+            System.out.println("            INTERVALO DE NÚMEROS           ");
+            System.out.println("===========================================");
+            System.out.print("Quantidade de números que serão lidos: ");
+                final int N = sc.nextInt();
+            System.out.println("===========================================");
 
-            // PROBLEMA NO CÓDIGO
+            for (int i = 0; i < N; i++) {
+                int X = sc.nextInt();
+                if (X >= 10 && X <= 20) {
+                    in += 1;
+                } else { out += 1; }
+            }
 
-            /* for (int i = 10; i <= 20; i++) {
-                if (N >= 10 && N <= 20) { in += 1; } else { out += 1; }
-            } */
-
-        System.out.printf("%d in%n", in);
-        System.out.printf("%d out%n", out);
+            System.out.println("============================================");
+            System.out.println("                  RESULTADO                 ");
+            System.out.println("============================================");
+            System.out.printf("%d in%n", in);
+            System.out.printf("%d out%n", out);
 
         sc.close();
 
