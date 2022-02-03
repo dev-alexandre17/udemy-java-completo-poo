@@ -22,7 +22,7 @@ public class Exercise6 {
             System.out.println("   MULTIPLICAÇÕES DE NÚMEROS  ");
             System.out.println("==============================");
             System.out.print("Digite um valor: ");
-                int N = sc.nextInt();
+                final int N = sc.nextInt();
             System.out.println("==============================");
             System.out.println("           RESULTADO          ");
             System.out.println("==============================");
