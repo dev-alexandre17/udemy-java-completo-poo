@@ -6,19 +6,14 @@ public class Bank {
     private String nomeT;
     private double deposito;
 
-    public Bank(){}
-
-    public Bank(int numConta, String nomeT) {
+    public Bank(int numConta, String nomeT, double deposito) {
         this.numConta = numConta;
         this.nomeT = nomeT;
+        this.deposito = deposito;
     }
 
     public Bank(double deposito) {
         this.deposito = deposito;
-    }
-
-    public void setNumConta(int numConta) {
-        this.numConta = numConta;
     }
 
     public int getNumConta() {
@@ -51,8 +46,8 @@ public class Bank {
     }*/
 
     public String toString() {
-        return "Account " + this.numConta
-        + " Holder: " + nomeT
+        return "Account " + String.format("%d", numConta)
+        + ", Holder: " + String.format("%s", nomeT)
         + ", Balance: $ " + String.format("%.2f", deposito);
     }
 
