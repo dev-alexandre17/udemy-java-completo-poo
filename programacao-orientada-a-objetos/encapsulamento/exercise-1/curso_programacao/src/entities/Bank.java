@@ -4,16 +4,23 @@ public class Bank {
 
     private int numConta;
     private String nomeT;
+    private double saldo;
     private double deposito;
+    private double saque;
 
-    public Bank(int numConta, String nomeT, double deposito) {
+    public Bank(int numConta, String nomeT, double saldo,
+                double deposito, double saque) {
         this.numConta = numConta;
         this.nomeT = nomeT;
+        this.saldo = saldo;
         this.deposito = deposito;
+        this.saque = saque;
     }
 
-    public Bank(double deposito) {
-        this.deposito = deposito;
+    public Bank(int numConta, String nomeT, double saldo) {
+        this.numConta = numConta;
+        this.nomeT = nomeT;
+        this.saldo = saldo;
     }
 
     public int getNumConta() {
@@ -36,19 +43,19 @@ public class Bank {
         return deposito;
     }
 
-    /*public void verificarDeposito(char dinheiro) {
-        if (dinheiro == 'y') {
-            System.out.print("Enter initial deposit value: ");
-            double money =
-        } else {
+    public double deposito(double deposito) {
+        return (saldo += deposito);
+    }
 
-        }
-    }*/
+    public double saque(double saque) {
+        saldo = ((saldo - saque) - 5.00);
+        return saldo;
+    }
 
     public String toString() {
         return "Account " + String.format("%d", numConta)
         + ", Holder: " + String.format("%s", nomeT)
-        + ", Balance: $ " + String.format("%.2f", deposito);
+        + ", Balance: $ " + String.format("%.2f", saldo);
     }
 
 }

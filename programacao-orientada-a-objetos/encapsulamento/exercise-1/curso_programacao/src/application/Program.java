@@ -30,12 +30,28 @@ public class Program {
             sc.nextLine();
             customer = new Bank(numConta, nomeT, deposito);
         } else {
-            customer = new Bank(0.0);
+            customer = new Bank(numConta, nomeT, 0.0);
         }
 
         System.out.println();
 
         System.out.println("Account data: ");
+        System.out.println(customer);
+
+        System.out.println();
+
+        System.out.print("Enter a deposit value: ");
+        double valueD = sc.nextDouble();
+        customer.deposito(valueD);
+        System.out.println("Updated account data: ");
+        System.out.println(customer);
+
+        System.out.println();
+
+        System.out.print("Enter a withdraw value: ");
+        double valueS = sc.nextDouble();
+        customer.saque(valueS);
+        System.out.println("Updated account data: ");
         System.out.println(customer);
 
     }
