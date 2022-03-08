@@ -14,23 +14,23 @@ public class Program {
         Bank customer;
 
         System.out.print("Enter account number: ");
-        int numConta = sc.nextInt();
+        int accountNumber = sc.nextInt();
         sc.nextLine();
 
         System.out.print("Enter account holder: ");
-        String nomeT = sc.nextLine();
+        String titularName = sc.nextLine();
 
         System.out.print("Is there initial deposit (y/n)? ");
-        char opcD = sc.next().charAt(0);
+        char optionalDeposit = sc.next().charAt(0);
         sc.nextLine();
 
-        if (Character.toString(opcD).matches("y")) {
+        if (Character.toString(optionalDeposit).matches("y")) {
             System.out.print("Enter initial value: ");
-            double deposito = sc.nextDouble();
+            double deposit = sc.nextDouble();
             sc.nextLine();
-            customer = new Bank(numConta, nomeT, deposito);
+            customer = new Bank(accountNumber, titularName, deposit);
         } else {
-            customer = new Bank(numConta, nomeT, 0.0);
+            customer = new Bank(accountNumber, titularName, 0.0);
         }
 
         System.out.println();
@@ -41,16 +41,16 @@ public class Program {
         System.out.println();
 
         System.out.print("Enter a deposit value: ");
-        double valueD = sc.nextDouble();
-        customer.deposito(valueD);
+        double depositAmount = sc.nextDouble();
+        customer.deposit(depositAmount);
         System.out.println("Updated account data: ");
         System.out.println(customer);
 
         System.out.println();
 
         System.out.print("Enter a withdraw value: ");
-        double valueS = sc.nextDouble();
-        customer.saque(valueS);
+        double withdrawalAmount = sc.nextDouble();
+        customer.saque(withdrawalAmount);
         System.out.println("Updated account data: ");
         System.out.println(customer);
 

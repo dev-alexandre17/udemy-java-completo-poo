@@ -2,60 +2,58 @@ package entities;
 
 public class Bank {
 
-    private int numConta;
-    private String nomeT;
-    private double saldo;
-    private double deposito;
-    private double saque;
+    private int accountNumber;
+    private String titularName;
+    private double balance;
+    private double deposit;
+    private double withdrawal;
 
-    public Bank(int numConta, String nomeT, double saldo,
-                double deposito, double saque) {
-        this.numConta = numConta;
-        this.nomeT = nomeT;
-        this.saldo = saldo;
-        this.deposito = deposito;
-        this.saque = saque;
+    public Bank(int accountNumber, String titularName, double balance,
+                double deposit, double withdrawal) {
+        this.accountNumber = accountNumber;
+        this.titularName = titularName;
+        this.balance = balance;
+        this.deposit = deposit;
+        this.withdrawal = withdrawal;
     }
 
-    public Bank(int numConta, String nomeT, double saldo) {
-        this.numConta = numConta;
-        this.nomeT = nomeT;
-        this.saldo = saldo;
+    public Bank(int accountNumber, String titularName, double balance) {
+        this.accountNumber = accountNumber;
+        this.titularName = titularName;
+        this.balance = balance;
     }
 
-    public int getNumConta() {
-        return numConta;
+    public int getAccountNumber() {
+        return accountNumber;
     }
 
-    public void setNomeT(String nomeT) {
-        this.nomeT = nomeT;
+    public void setTitularName(String titularName) {
+        this.titularName = titularName;
     }
 
-    public String getNomeT() {
-        return nomeT;
+    public String getTitularName() {
+        return titularName;
     }
 
-    public void setDeposito(double deposito) {
-        this.deposito = deposito;
+    public void setDeposit(double deposit) { this.deposit = deposit; }
+
+    public double getDeposit() {
+        return deposit;
     }
 
-    public double getDeposito() {
-        return deposito;
+    public double deposit(double deposit) {
+        return (balance += deposit);
     }
 
-    public double deposito(double deposito) {
-        return (saldo += deposito);
-    }
-
-    public double saque(double saque) {
-        saldo = ((saldo - saque) - 5.00);
-        return saldo;
+    public double saque(double withdrawal) {
+        balance = ((balance - withdrawal) - 5.00);
+        return balance;
     }
 
     public String toString() {
-        return "Account " + String.format("%d", numConta)
-        + ", Holder: " + String.format("%s", nomeT)
-        + ", Balance: $ " + String.format("%.2f", saldo);
+        return "Account " + String.format("%d", accountNumber)
+        + ", Holder: " + String.format("%s", titularName)
+        + ", Balance: $ " + String.format("%.2f", balance);
     }
 
 }
