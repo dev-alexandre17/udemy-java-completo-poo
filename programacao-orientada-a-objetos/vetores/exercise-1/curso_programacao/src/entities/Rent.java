@@ -16,7 +16,7 @@ public class Rent {
     }
 
     public String getName() {
-        return email;
+        return name;
     }
 
     public void setEmail(String email) {
@@ -27,4 +27,8 @@ public class Rent {
         return email;
     }
 
+    @Override
+    public String toString() {
+        return name + ", " + email;
+    }
 }
