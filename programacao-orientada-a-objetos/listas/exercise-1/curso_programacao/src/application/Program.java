@@ -11,11 +11,11 @@ public class Program {
 
     public static void main(String[] args) {
 
-        List<Employee> list = new ArrayList<Employee>();
+        Locale.setDefault(Locale.US);
+
+        List<Employee> list = new ArrayList<>();
 
         Employee employee;
-
-        Locale.setDefault(Locale.US);
 
         Scanner sc = new Scanner(System.in);
 
@@ -27,9 +27,9 @@ public class Program {
                 System.out.println("Employee #" + i + ":");
                 System.out.print("Id: ");
                 int id = sc.nextInt();
+                sc.nextLine();
                 System.out.print("Name: ");
                 String name = sc.nextLine();
-                sc.nextLine();
                 System.out.print("Salary: ");
                 double salary = sc.nextDouble();
                 System.out.println();
@@ -44,6 +44,12 @@ public class Program {
             double percentage = sc.nextDouble();
 
             System.out.println();
+
+            System.out.println("List of employees: ");
+            for (Employee emp : list) {
+                System.out.println(emp);
+            }
+
 
         sc.close();
 

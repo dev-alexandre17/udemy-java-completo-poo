@@ -7,7 +7,12 @@ public class Employee {
     private Double salary;
 
     public Employee () {}
-    public Employee(Integer id, String name, Double salary) {}
+
+    public Employee(Integer id, String name, Double salary) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+    }
 
     public Integer getId() {
         return id;
@@ -35,6 +40,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return id + ", " + name + ", " + salary;
+        return id + ", " + name + ", " + String.format("%.2f", salary);
     }
+
 }
