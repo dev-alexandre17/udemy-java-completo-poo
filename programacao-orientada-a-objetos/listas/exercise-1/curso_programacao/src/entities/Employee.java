@@ -43,4 +43,8 @@ public class Employee {
         return id + ", " + name + ", " + String.format("%.2f", salary);
     }
 
+    public void increaseSalary(Double percentage) {
+        salary += salary * (percentage/100);
+    }
+
 }

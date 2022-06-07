@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Program {
 
@@ -15,7 +16,7 @@ public class Program {
 
         List<Employee> list = new ArrayList<>();
 
-        Employee employee;
+        Employee employee = null;
 
         Scanner sc = new Scanner(System.in);
 
@@ -40,16 +41,21 @@ public class Program {
             System.out.print("Enter the employee id that will have salary increase: ");
             int id_employee = sc.nextInt();
 
-            System.out.print("Enter the percentage: ");
-            double percentage = sc.nextDouble();
+            Employee employee1 = list.stream().filter(z -> z.getId() == id_employee).findFirst().orElse(null);
 
-            System.out.println();
-
-            System.out.println("List of employees: ");
-            for (Employee emp : list) {
-                System.out.println(emp);
+            if (employee1 == null) {
+                System.out.println("This id doesn't exist\n");
+            } else {
+                System.out.print("Enter the percentage: ");
+                double percentage = sc.nextDouble();
+                employee1.increaseSalary(percentage);
+                System.out.println();
             }
 
+            System.out.println("List of employees: ");
+                for (Employee emp : list) {
+                    System.out.println(emp);
+            }
 
         sc.close();
 
