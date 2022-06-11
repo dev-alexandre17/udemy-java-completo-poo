@@ -8,13 +8,8 @@ public class Program {
 
         Scanner sc = new Scanner(System.in);
 
-            System.out.print("Press M: ");
             int m = sc.nextInt();
-
-            System.out.print("Press N: ");
             int n = sc.nextInt();
-
-            System.out.println();
 
             int matrix[][] = new int[m][n];
             int position;
@@ -25,14 +20,7 @@ public class Program {
                 }
             }
 
-            System.out.println();
-
-            System.out.print("Press X: ");
             int x = sc.nextInt();
-
-            System.out.println();
-
-            // Descobrir a posição de um elemento na matriz
 
             for (int i = 0; i < matrix.length; i++) {
                for (int j = 0; j < matrix[i].length; j++) {
@@ -41,8 +29,14 @@ public class Program {
                        if (j > 0) {
                            System.out.println("Left: " + matrix[i][j - 1]);
                        }
+                       if (j < m) {
+                           System.out.println("Right: " + matrix[i][j+1]);
+                       }
                        if (i > 0) {
                            System.out.println("Up: " + matrix[i-1][j]);
+                       }
+                       if (i < m) {
+                           System.out.println("Down: " + matrix[i+1][j]);
                        }
                    }
                }
